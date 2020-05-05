@@ -1,0 +1,4 @@
+_POTD_DISCUSSION_CHANNEL = "potd discussion channel"
+_POTD_SUGGESTION = "potd suggestion channel"
+_POTD_POST = "potd problem channel"
+DISCORD_TOKEN = "your bot token"

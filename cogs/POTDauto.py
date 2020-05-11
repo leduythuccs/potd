@@ -87,7 +87,7 @@ class POTDauto(commands.Cog):
 
         await self.clear_role(message)
         await self.post_new_problem(message)
-        await message.channel.send("Last POTD was posted {} days ago. Probably time for a new one?!?".format(diff.days))
+        await POTD_dis.send("Last POTD was posted {} days ago. Probably time for a new one?!?".format(diff.days))
 
 
 def setup(bot):

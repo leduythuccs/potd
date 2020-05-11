@@ -18,6 +18,7 @@ bot = commands.Bot(command_prefix='potd ')
 print(bot.command_prefix)
 bot.load_extension("cogs.BotControl")
 bot.load_extension("cogs.POTD")
+bot.load_extension("cogs.POTDauto")
 
 def no_dm_check(ctx):
     if ctx.guild is None:

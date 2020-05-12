@@ -45,7 +45,7 @@ class POTDauto(commands.Cog):
         link, note, author = current_potd
         potd_database.PotdDB.move_problem('potd_using', 'potd_used', link, note, author)
 
-        await message.channel.send("{} fellas have completed their missions!!".format(cnt_AC))
+        await self.POTD_dis.send("{} fellas have completed their missions!!".format(cnt_AC))
     
     async def post_new_problem(self, message):
         potd = potd_database.PotdDB.get_potd()
@@ -87,7 +87,7 @@ class POTDauto(commands.Cog):
 
         await self.clear_role(message)
         await self.post_new_problem(message)
-        await POTD_dis.send("Last POTD was posted {} days ago. Probably time for a new one?!?".format(diff.days))
+        await self.POTD_dis.send("Last POTD was posted {} days ago. Probably time for a new one?!?".format(diff.days))
 
 
 def setup(bot):
